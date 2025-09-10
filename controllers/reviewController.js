@@ -54,7 +54,7 @@ exports.reviewOrder = async (req, res) => {
             text = "We’re glad you loved the product. Thanks for your support!";
         }
 
-        await transporter.sendMail({
+        await transporter.nodemailer({
             from: process.env.EMAIL_USER,
             to: email,
             subject,
